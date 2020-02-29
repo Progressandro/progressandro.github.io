@@ -1,12 +1,12 @@
 import React from 'react';
 import { Container, Typography } from '@material-ui/core';
 
-function Home() {
+function Work() {
   return (
     <Container>
-      <Typography variant="body1">Home</Typography>
+      <Typography variant="h1">Work</Typography>
     </Container>
   );
 }
 
-export default Home;
+export default Work;
