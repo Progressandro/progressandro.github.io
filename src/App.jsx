@@ -7,7 +7,7 @@ import Work from './components/Work';
 
 function App() {
   return (
-    <BrowserRouter basename="resume">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <MainView>
         <Switch>
           <Route exact path="/" component={Home} />
