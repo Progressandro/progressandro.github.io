@@ -7,14 +7,14 @@ import Work from './components/Work';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="resume">
       <MainView>
         <Switch>
-          <Route exact path={`${process.env.PUBLIC_URL}/`} component={Home} />
-          <Route exact path={`${process.env.PUBLIC_URL}/home`}>
-            <Redirect to={`${process.env.PUBLIC_URL}/`} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/home">
+            <Redirect to="/" />
           </Route>
-          <Route path={`${process.env.PUBLIC_URL}/work`} component={Work} />
+          <Route path="/work" component={Work} />
           {/* <Route path="/studies" component={Studies} />
         <Route path="/projects" component={Projects} />
         <Route path="/hobbies" component={Hobbies} />

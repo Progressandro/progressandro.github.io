@@ -82,7 +82,7 @@ function MainView(props) {
         <NavLink
           onClick={() => setMobileOpen(false)}
           className={classes.navLink}
-          to={`${process.env.PUBLIC_URL}/home`}
+          to="/home"
         >
           <ListItem button key="Home">
             <ListItemIcon>
@@ -94,7 +94,7 @@ function MainView(props) {
         <NavLink
           onClick={() => setMobileOpen(false)}
           className={classes.navLink}
-          to={`${process.env.PUBLIC_URL}/work`}
+          to="/work"
         >
           <ListItem button key="Work">
             <ListItemIcon>

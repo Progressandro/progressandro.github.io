@@ -67,12 +67,11 @@ const Experiences = () => {
   const classes = useStyles(theme);
 
   const items = projectList.map(item => (
-    <ListItem className={classes.root}>
+    <ListItem className={classes.root} key={item.key}>
       <Card className={classes.card}>
         <CardMedia
           className={classes.cardMedia}
-          image={`../../assets/${item.image}`}
-          inlist
+          image={`${process.env.PUBLIC_URL}/assets/${item.image}`}
         />
         <CardContent className={classes.cardContent}>
           <div className={classes.contentPosition}>
