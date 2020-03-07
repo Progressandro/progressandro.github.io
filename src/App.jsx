@@ -7,7 +7,7 @@ import Work from './components/Work';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="resume">
       <MainView>
         <Switch>
           <Route exact path="/" component={Home} />
