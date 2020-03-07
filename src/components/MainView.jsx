@@ -16,7 +16,7 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
-import { Avatar } from '@material-ui/core';
+import { Avatar, Container } from '@material-ui/core';
 import DrawerHeader from './DrawerHeader';
 
 const drawerWidth = 300;
@@ -24,6 +24,7 @@ const drawerWidth = 300;
 const useStyles = makeStyles(theme => ({
   root: {
     display: 'flex',
+    flexGrow: 1,
   },
   drawer: {
     [theme.breakpoints.up('sm')]: {
@@ -46,46 +47,52 @@ const useStyles = makeStyles(theme => ({
   toolbar: theme.mixins.toolbar,
   drawerPaper: {
     width: drawerWidth,
-  },
-  content: {
-    flexGrow: 1,
-    padding: theme.spacing(3),
+    backgroundColor: '#283044',
+    color: 'white',
   },
   navLink: {
     textDecoration: 'none',
-    color: 'initial',
+    color: 'white',
+  },
+  content: {
+    flexGrow: 1,
+  },
+  contentContainer: {
+    flexGrow: 1,
+    minHeight: '100vh',
+    backgroundColor: '#EBF5EE',
+    padding: 0,
   },
 }));
 
-function SideDrawer(props) {
+function MainView(props) {
   const { container, children } = props;
   const classes = useStyles();
   const theme = useTheme();
   const [mobileOpen, setMobileOpen] = React.useState(false);
-
   const handleDrawerToggle = () => {
     setMobileOpen(!mobileOpen);
   };
 
-  const drawer = (
+  const drawerContent = (
     <div>
       <DrawerHeader />
       <Divider />
       <List>
         <NavLink
-          onClick={handleDrawerToggle}
+          onClick={() => setMobileOpen(false)}
           className={classes.navLink}
           to="/home"
         >
           <ListItem button key="Home">
             <ListItemIcon>
-              <Home />
+              <Home color="primary" />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
         </NavLink>
         <NavLink
-          onClick={handleDrawerToggle}
+          onClick={() => setMobileOpen(false)}
           className={classes.navLink}
           to="/work"
         >
@@ -103,7 +110,7 @@ function SideDrawer(props) {
   return (
     <div className={classes.root}>
       <CssBaseline />
-      <Hidden smUp implementation="css">
+      <Hidden lgUp implementation="css">
         <AppBar position="fixed" className={classes.appBar}>
           <Toolbar>
             <IconButton
@@ -128,7 +135,7 @@ function SideDrawer(props) {
         </AppBar>
       </Hidden>
       <nav className={classes.drawer} aria-label="mailbox folders">
-        <Hidden smUp implementation="css">
+        <Hidden lgUp implementation="css">
           <Drawer
             container={container}
             variant="temporary"
@@ -142,7 +149,7 @@ function SideDrawer(props) {
               keepMounted: true, // Better open performance on mobile.
             }}
           >
-            {drawer}
+            {drawerContent}
           </Drawer>
         </Hidden>
         <Hidden xsDown implementation="css">
@@ -153,18 +160,20 @@ function SideDrawer(props) {
             variant="permanent"
             open
           >
-            {drawer}
+            {drawerContent}
           </Drawer>
         </Hidden>
       </nav>
       <main className={classes.content}>
-        <Hidden smUp>
+        <Hidden lgUp>
           <div className={classes.toolbar} />
         </Hidden>
-        {children}
+        <Container maxWidth="xl" className={classes.contentContainer}>
+          {children}
+        </Container>
       </main>
     </div>
   );
 }
 
-export default SideDrawer;
+export default MainView;

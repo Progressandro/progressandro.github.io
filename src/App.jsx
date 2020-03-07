@@ -1,14 +1,14 @@
 import React from 'react';
 import './App.css';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
-import SideDrawer from './components/SideDrawer';
+import MainView from './components/MainView';
 import Home from './components/Home';
 import Work from './components/Work';
 
 function App() {
   return (
     <BrowserRouter>
-      <SideDrawer>
+      <MainView>
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/home">
@@ -20,7 +20,7 @@ function App() {
         <Route path="/hobbies" component={Hobbies} />
         <Route component={ErrorPage} /> */}
         </Switch>
-      </SideDrawer>
+      </MainView>
     </BrowserRouter>
   );
 }
