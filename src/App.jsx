@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, HashRouter } from 'react-router-dom';
 import MainView from './components/MainView';
 import Home from './components/Home';
 import Work from './components/Work';
 
 function App() {
   return (
-    <BrowserRouter basename="resume">
+    <HashRouter basename="resume">
       <MainView>
         <Switch>
           <Route exact path="/" component={Home} />
@@ -21,7 +21,7 @@ function App() {
         <Route component={ErrorPage} /> */}
         </Switch>
       </MainView>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
