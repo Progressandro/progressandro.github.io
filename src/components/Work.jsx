@@ -27,8 +27,9 @@ const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   },
   cardMedia: {
     minWidth: 200,
+    minHeight: 200,
+    maxHeight: 200,
     [breakpoints.down('md')]: {
-      height: 200,
       width: '100%',
     },
   },

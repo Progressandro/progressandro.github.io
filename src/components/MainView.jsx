@@ -54,6 +54,11 @@ const useStyles = makeStyles(theme => ({
     textDecoration: 'none',
     color: 'white',
   },
+  activeNavLink: {
+    '& > *, > *:hover': {
+      backgroundColor: theme.palette.primary.light,
+    },
+  },
   content: {
     flexGrow: 1,
   },
@@ -82,11 +87,13 @@ function MainView(props) {
         <NavLink
           onClick={() => setMobileOpen(false)}
           className={classes.navLink}
-          to="/home"
+          to="/"
+          activeClassName={classes.activeNavLink}
+          exact
         >
           <ListItem button key="Home">
             <ListItemIcon>
-              <Home color="primary" />
+              <Home />
             </ListItemIcon>
             <ListItemText primary="Home" />
           </ListItem>
@@ -95,6 +102,8 @@ function MainView(props) {
           onClick={() => setMobileOpen(false)}
           className={classes.navLink}
           to="/work"
+          activeClassName={classes.activeNavLink}
+          exact
         >
           <ListItem button key="Work">
             <ListItemIcon>
