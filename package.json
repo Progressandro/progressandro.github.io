@@ -1,5 +1,5 @@
 {
-  "homepage": "http://Progressandro.github.io/",
+  "homepage": "http://progressandro.github.io/",
   "name": "resume",
   "version": "0.1.0",
   "private": true,
@@ -16,7 +16,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -b master -d build",
     "start": "BROWSER=\"google-chrome-stable\" react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
