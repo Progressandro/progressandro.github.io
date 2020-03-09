@@ -12,6 +12,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import MenuIcon from '@material-ui/icons/Menu';
 import Home from '@material-ui/icons/Home';
 import Work from '@material-ui/icons/Work';
+import School from '@material-ui/icons/School';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -110,6 +111,20 @@ function MainView(props) {
               <Work />
             </ListItemIcon>
             <ListItemText primary="Work" />
+          </ListItem>
+        </NavLink>
+        <NavLink
+          onClick={() => setMobileOpen(false)}
+          className={classes.navLink}
+          to="/projects"
+          activeClassName={classes.activeNavLink}
+          exact
+        >
+          <ListItem button key="Projects">
+            <ListItemIcon>
+              <School />
+            </ListItemIcon>
+            <ListItemText primary="Projects" />
           </ListItem>
         </NavLink>
       </List>

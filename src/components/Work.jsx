@@ -8,7 +8,7 @@ import {
   ListItem,
 } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import projectList from '../shared/projects';
+import workList from '../shared/work';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   root: {
@@ -67,7 +67,7 @@ const Experiences = () => {
   const theme = useTheme();
   const classes = useStyles(theme);
 
-  const items = projectList.map(item => (
+  const items = workList.map(item => (
     <ListItem className={classes.root} key={item.key}>
       <Card className={classes.card}>
         <CardMedia

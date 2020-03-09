@@ -7,7 +7,7 @@ import {
   CardContent,
 } from '@material-ui/core';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
-import introData from '../shared/summary';
+import introData from '../shared/home';
 
 const useStyles = makeStyles(({ breakpoints, spacing }) => ({
   list: {
