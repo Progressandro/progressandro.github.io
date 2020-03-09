@@ -4,10 +4,12 @@ import { Route, Switch, BrowserRouter } from 'react-router-dom';
 import MainView from './components/MainView';
 import Home from './components/Home';
 import Work from './components/Work';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <MainView>
         <Switch>
           <Route exact path="/" component={Home} />
