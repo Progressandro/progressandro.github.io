@@ -1,38 +1,34 @@
 import React, { useState } from 'react';
-import { Grid, Typography } from '@material-ui/core';
-// import projects from '../shared/projects';
-import Slideshow from './Slideshow';
+import { Grid, Typography, Container } from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+import projects from '../shared/projects';
+import ProjectCarousel from './ProjectCarousel';
+import ProjectData from './ProjectData';
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    height: '100%',
+    flexDirection: 'column',
+  },
+  carouselContainer: {
+    flexGrow: 3,
+  },
+  dataContainer: {
+    flexGrow: 1,
+  }
+}));
 
 export default function Projects() {
+  const classes = useStyles();
   const [index, setIndex] = useState(0);
-  const images = [
-    'https://via.placeholder.com/800x600',
-    'https://via.placeholder.com/800x600',
-    'https://via.placeholder.com/800x600',
-  ];
-
-  const updateSlider = (oldIndex, newIndex) => {
-    setIndex(newIndex);
-    console.log(index, newIndex);
-  };
-
   return (
-    <Grid
-      container
-      direction="column"
-      alignItems="center"
-      item
-      // style={{ width: '100%' }}
-    >
-      <Grid item>
-        <Slideshow update={updateSlider} images={images} />
+    <Grid container className={classes.root}>
+      <Grid container item className={classes.carouselContainer}>
+        <ProjectCarousel />
       </Grid>
-      <Grid item>
-        <Typography variant="h1">Test</Typography>
-        {/* <Typography variant="h3">{projects[index].title}</Typography>
-        <Typography variant="h4">{projects[index].technologies}</Typography>
-        <Typography variant="body2">{projects[index].duration}</Typography>
-        <Typography variant="body1">{projects[index].description}</Typography> */}
+      <Grid container item className={classes.dataContainer}>
+        <ProjectData />
       </Grid>
     </Grid>
   );

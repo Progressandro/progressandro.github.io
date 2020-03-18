@@ -32,5 +32,5 @@ export default [
   {
     key: 'bye-reply',
     text: `Bye!`,
-  }
+  },
 ];
