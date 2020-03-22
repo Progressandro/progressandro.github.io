@@ -67,7 +67,6 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     minHeight: '100vh',
     height: '100vh',
-    maxHeight: '100vh',
     backgroundColor: '#EBF5EE',
     padding: 0,
   },

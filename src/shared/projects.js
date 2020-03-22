@@ -1,7 +1,7 @@
 export default [
   {
     key: 'pokedex',
-    tite: 'Pokédex',
+    title: 'Pokédex',
     description: `PokéAPI client that enables users to search a pokémon by name, and then displays the sprite of said pokémon.`,
     learned: [
       'Pour my Fetch API experience into React.',
@@ -10,10 +10,11 @@ export default [
     ],
     technologies: ['React', 'Redux', 'Material UI', 'React Live Search'],
     repository: 'https://github.com/Progressandro/React-Pokedex',
+    image: 'pokedex.png',
   },
   {
     key: 'hangman',
-    tite: 'Hangman Game',
+    title: 'Hangman Game',
     description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React.`,
     learned: [
       'Material UI usage with React.',
@@ -22,10 +23,11 @@ export default [
     ],
     technologies: ['React', 'Material UI'],
     repository: 'https://github.com/Progressandro/hangman-react',
+    image: 'hangman.png',
   },
   {
     key: 'resume',
-    tite: 'Personal Resume',
+    title: 'Personal Resume',
     description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React.`,
     learned: [
       'Deeper understanding about React Router.',
@@ -34,10 +36,11 @@ export default [
     ],
     technologies: ['React', 'Material UI'],
     repository: 'https://github.com/Progressandro/progressandro.github.io',
+    image: '',
   },
   {
     key: 'instadvice',
-    tite: 'Instadvice [In Progress]',
+    title: 'Instadvice [In Progress]',
     description: `Get a random advice, like or dislike it, save your favorites and check the community's greatest advices.`,
     learned: [
       'MERN Stack based Back-End development.',
@@ -53,10 +56,11 @@ export default [
       'Postman',
     ],
     repository: 'https://github.com/Progressandro/instadvice',
+    image: 'instadvice.png',
   },
   {
     key: 'restaurant',
-    tite: 'ConFusion Restaurant App',
+    title: 'ConFusion Restaurant App',
     description: `App for a Restaurant, developed during Coursera's MERN Full-Stack Specialization course.`,
     learned: [
       'First interactions with React',
@@ -66,10 +70,11 @@ export default [
     ],
     technologies: ['React', 'Redux', 'Reactstrap', 'Redux-Thunk'],
     repository: 'https://github.com/Progressandro/Restaurant-React',
+    image: 'restaurant.png',
   },
   {
     key: 'other',
-    tite: 'Other Projects',
+    title: 'Other Projects',
     description: `The projects mentioned before are the ones that best describes what I'm aiming for at this point in time. However, there are many more that can be easily checked out at my Github Profile.`,
     learned: [
       'Numerical Methods[Python].',
@@ -87,5 +92,6 @@ export default [
       'Apache',
     ],
     repository: 'https://github.com/Progressandro',
+    image: '',
   },
 ];
