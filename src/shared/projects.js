@@ -15,7 +15,7 @@ export default [
   {
     key: 'hangman',
     title: 'Hangman Game',
-    description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React.`,
+    description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React. User interface is kinda raw since I was starting using React :P.`,
     learned: [
       'Material UI usage with React.',
       'State Management.',
@@ -36,12 +36,12 @@ export default [
     ],
     technologies: ['React', 'Material UI'],
     repository: 'https://github.com/Progressandro/progressandro.github.io',
-    image: '',
+    image: 'https://via.placeholder.com/150',
   },
   {
     key: 'instadvice',
-    title: 'Instadvice [In Progress]',
-    description: `Get a random advice, like or dislike it, save your favorites and check the community's greatest advices.`,
+    title: 'Instadvice',
+    description: `Get a random advice, like or dislike it, save your favorites and check the community's greatest advices. Work in progress.`,
     learned: [
       'MERN Stack based Back-End development.',
       'Front-End<->Backend Communication in MERN.',
@@ -92,6 +92,6 @@ export default [
       'Apache',
     ],
     repository: 'https://github.com/Progressandro',
-    image: '',
+    image: 'https://via.placeholder.com/500',
   },
 ];
