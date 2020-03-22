@@ -10,22 +10,20 @@ import {
   List,
   ListItem,
   Chip,
-  Badge,
 } from '@material-ui/core';
-import { ArrowForward } from '@material-ui/icons';
 import Carousel from 'nuka-carousel';
 import projects from '../shared/projects';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    minHeight: '100%',
+    height: '100%',
     padding: theme.spacing(1),
     [theme.breakpoints.down('sm')]: {
       minHeight: 'initial',
     },
   },
   card: {
-    minHeight: '100%',
+    height: '100%',
     padding: theme.spacing(2),
     // paddingBottom: theme.spacing(6),
     // marginLeft: theme.spacing(2),
@@ -71,6 +69,9 @@ const useStyles = makeStyles(theme => ({
       width: 'initial',
     },
   },
+  description: {
+    minWidth: '100%',
+  },
 }));
 const Projects = () => {
   const classes = useStyles();
@@ -89,7 +90,7 @@ const Projects = () => {
               ))}
             </List>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.description}>
             <Divider className={classes.cardDivider} />
             <Typography variant="body1">{item.description}</Typography>
           </Grid>
@@ -110,12 +111,7 @@ const Projects = () => {
   ));
 
   return (
-    <Grid
-      container
-      item
-      className={classes.root}
-      onClick={e => e.preventDefault()}
-    >
+    <Grid container item className={classes.root}>
       <Carousel
         slidesToShow={1}
         slidesToScroll={1}
@@ -132,6 +128,7 @@ const Projects = () => {
         )}
         afterSlide={() => window.scrollTo(0, 0)}
         wrapAround
+        heightMode="current"
       >
         {slides}
       </Carousel>

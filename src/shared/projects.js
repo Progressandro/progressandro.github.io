@@ -13,32 +13,6 @@ export default [
     image: 'pokedex.png',
   },
   {
-    key: 'hangman',
-    title: 'Hangman Game',
-    description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React. User interface is kinda raw since I was starting using React :P.`,
-    learned: [
-      'Material UI usage with React.',
-      'State Management.',
-      'Conditional Rendering.',
-    ],
-    technologies: ['React', 'Material UI'],
-    repository: 'https://github.com/Progressandro/hangman-react',
-    image: 'hangman.png',
-  },
-  {
-    key: 'resume',
-    title: 'Personal Resume',
-    description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React.`,
-    learned: [
-      'Deeper understanding about React Router.',
-      'Advanced Layouts in React.',
-      'Material UI Sidebar Component implementation.',
-    ],
-    technologies: ['React', 'Material UI'],
-    repository: 'https://github.com/Progressandro/progressandro.github.io',
-    image: 'https://via.placeholder.com/150',
-  },
-  {
     key: 'instadvice',
     title: 'Instadvice',
     description: `Get a random advice, like or dislike it, save your favorites and check the community's greatest advices. Work in progress.`,
@@ -73,6 +47,32 @@ export default [
     image: 'restaurant.png',
   },
   {
+    key: 'hangman',
+    title: 'Hangman Game',
+    description: `Classic Hangman game that let's you review your choices and "time-travel" back to any step. I built this to practice state management in React. User interface is kinda raw since I was starting using React :P.`,
+    learned: [
+      'Material UI usage with React.',
+      'State Management.',
+      'Conditional Rendering.',
+    ],
+    technologies: ['React', 'Material UI'],
+    repository: 'https://github.com/Progressandro/hangman-react',
+    image: 'hangman.png',
+  },
+  {
+    key: 'resume',
+    title: 'Personal Resume',
+    description: `This resume is also part of my React coding practices.`,
+    learned: [
+      'Deeper understanding about React Router.',
+      'Advanced Layouts in React.',
+      'Material UI Sidebar Component implementation.',
+    ],
+    technologies: ['React', 'Material UI'],
+    repository: 'https://github.com/Progressandro/progressandro.github.io',
+    image: 'resume.png',
+  },
+  {
     key: 'other',
     title: 'Other Projects',
     description: `The projects mentioned before are the ones that best describes what I'm aiming for at this point in time. However, there are many more that can be easily checked out at my Github Profile.`,
@@ -92,6 +92,6 @@ export default [
       'Apache',
     ],
     repository: 'https://github.com/Progressandro',
-    image: 'https://via.placeholder.com/500',
+    image: 'others.png',
   },
 ];
