@@ -9,9 +9,10 @@ import {
   Divider,
   List,
   ListItem,
-  Button,
   Chip,
+  Badge,
 } from '@material-ui/core';
+import { ArrowForward } from '@material-ui/icons';
 import Carousel from 'nuka-carousel';
 import projects from '../shared/projects';
 
@@ -19,8 +20,12 @@ const useStyles = makeStyles(theme => ({
   root: {
     minHeight: '100%',
     padding: theme.spacing(1),
+    [theme.breakpoints.down('sm')]: {
+      minHeight: 'initial',
+    },
   },
   card: {
+    minHeight: '100%',
     padding: theme.spacing(2),
     // paddingBottom: theme.spacing(6),
     // marginLeft: theme.spacing(2),
@@ -28,6 +33,7 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'center',
     [theme.breakpoints.down('sm')]: {
       flexDirection: 'column',
+      minHeight: 'initial',
     },
   },
   cardImage: {
@@ -56,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   buttons: {
-    opacity: '0.4',
+    opacity: '0.5',
   },
   technologiesList: {
     display: 'flex',
@@ -69,7 +75,7 @@ const useStyles = makeStyles(theme => ({
 const Projects = () => {
   const classes = useStyles();
   const slides = projects.map(item => (
-    <Card className={classes.card} onClick={e => e.preventDefault()}>
+    <Card className={classes.card}>
       <CardContent className={classes.cardContent}>
         <Typography variant="h4">{item.title}</Typography>
         <Divider className={classes.cardDivider} />
@@ -78,7 +84,7 @@ const Projects = () => {
             <List className={classes.technologiesList}>
               {item.technologies.map(tech => (
                 <ListItem>
-                  <Chip label={tech} />
+                  <Chip color="secondary" label={tech} />
                 </ListItem>
               ))}
             </List>
@@ -114,30 +120,18 @@ const Projects = () => {
         slidesToShow={1}
         slidesToScroll={1}
         renderBottomCenterControls={null}
-        // animation="zoom"
-        renderCenterLeftControls={({ previousSlide }) => (
-          <Button
-            className={classes.buttons}
-            onClick={previousSlide}
-            variant="contained"
-            color="primary"
-            size="small"
-          >
-            {'<'}
-          </Button>
-        )}
+        renderCenterLeftControls={null}
         renderCenterRightControls={({ nextSlide }) => (
-          <Button
-            className={classes.buttons}
+          <Chip
             onClick={nextSlide}
-            variant="contained"
+            className={classes.buttons}
             color="primary"
-            size="small"
-          >
-            {'>'}
-          </Button>
+            aria-label="add"
+            label="SWIPE ►"
+          />
         )}
-        swiping={false}
+        afterSlide={() => window.scrollTo(0, 0)}
+        wrapAround
       >
         {slides}
       </Carousel>
