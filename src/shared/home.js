@@ -5,7 +5,7 @@ export default [
   },
   {
     key: 'me',
-    text: `I'm Alejandro, a 22 years old Web Developer from Venezuela. I spend most of my time either coding(duh), playing videogames or making music.`,
+    text: `I'm Alejandro, a 22 years old Web Developer from Venezuela. I spend most of my time either coding, playing videogames or making music.`,
   },
   {
     key: 'studies-question',

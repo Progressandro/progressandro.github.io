@@ -105,6 +105,7 @@ const Projects = () => {
               size="small"
               className={classes.actions}
               href={item.repository}
+              target="_blank"
               variant="outlined"
               color="primary"
             >
