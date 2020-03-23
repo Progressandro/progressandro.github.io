@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
   contentContainer: {
     flexGrow: 1,
     minHeight: '100vh',
-    height: '100vh',
+    height: '100%',
     backgroundColor: '#EBF5EE',
     padding: 0,
   },
