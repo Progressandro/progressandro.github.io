@@ -10,6 +10,8 @@ import {
   List,
   ListItem,
   Chip,
+  Button,
+  Hidden,
 } from '@material-ui/core';
 import Carousel from 'nuka-carousel';
 import projects from '../shared/projects';
@@ -67,10 +69,16 @@ const useStyles = makeStyles(theme => ({
     flexWrap: 'wrap',
     '& > *': {
       width: 'initial',
+      padding: theme.spacing(0.5),
     },
   },
   description: {
     minWidth: '100%',
+  },
+  actions: {
+    textDecoration: 'none',
+    fontWeight: 'bold',
+    marginTop: 10,
   },
 }));
 const Projects = () => {
@@ -81,6 +89,9 @@ const Projects = () => {
         <Typography variant="h4">{item.title}</Typography>
         <Divider className={classes.cardDivider} />
         <Grid container>
+          <Grid item className={classes.description}>
+            <Typography variant="body1">{item.description}</Typography>
+          </Grid>
           <Grid item>
             <List className={classes.technologiesList}>
               {item.technologies.map(tech => (
@@ -89,10 +100,16 @@ const Projects = () => {
                 </ListItem>
               ))}
             </List>
-          </Grid>
-          <Grid item className={classes.description}>
             <Divider className={classes.cardDivider} />
-            <Typography variant="body1">{item.description}</Typography>
+            <Button
+              size="small"
+              className={classes.actions}
+              href={item.repository}
+              variant="outlined"
+              color="primary"
+            >
+              Visit Repository
+            </Button>
           </Grid>
         </Grid>
       </CardContent>
@@ -123,12 +140,12 @@ const Projects = () => {
             className={classes.buttons}
             color="primary"
             aria-label="add"
-            label="SWIPE ►"
+            label="►"
           />
         )}
         afterSlide={() => window.scrollTo(0, 0)}
         wrapAround
-        heightMode="current"
+        heightMode="first"
       >
         {slides}
       </Carousel>
