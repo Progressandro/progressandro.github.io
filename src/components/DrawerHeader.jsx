@@ -28,7 +28,7 @@ function DrawerHeader() {
           <Avatar
             className={classes.avatar}
             alt="Alejandro Fabrega"
-            src="https://material-ui.com/static/images/avatar/1.jpg"
+            src={`${process.env.PUBLIC_URL}/assets/avatar.jpeg`}
           />
         </Grid>
         <Grid item container alignItems="center" xs={9}>

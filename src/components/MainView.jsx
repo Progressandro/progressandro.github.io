@@ -67,7 +67,7 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     minHeight: '100vh',
     height: '100%',
-    backgroundColor: '#EBF5EE',
+    backgroundColor: 'white',
     padding: 0,
   },
 }));
@@ -154,7 +154,7 @@ function MainView(props) {
               style={{ right: theme.spacing(2), position: 'absolute' }}
               className={classes.avatar}
               alt="Alejandro Fabrega"
-              src="https://material-ui.com/static/images/avatar/1.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/avatar.jpeg`}
             />
           </Toolbar>
         </AppBar>

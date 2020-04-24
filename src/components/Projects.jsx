@@ -25,6 +25,9 @@ const useStyles = makeStyles(theme => ({
     },
   },
   card: {
+    background: 'white',
+    border: 'transparent',
+    boxShadow: 'none',
     height: '100%',
     padding: theme.spacing(2),
     // paddingBottom: theme.spacing(6),
