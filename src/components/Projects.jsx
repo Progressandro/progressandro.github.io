@@ -11,7 +11,6 @@ import {
   ListItem,
   Chip,
   Button,
-  Hidden,
 } from '@material-ui/core';
 import Carousel from 'nuka-carousel';
 import projects from '../shared/projects';
