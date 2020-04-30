@@ -19,6 +19,7 @@ import { makeStyles, useTheme } from '@material-ui/core/styles';
 import { NavLink } from 'react-router-dom';
 import { Avatar, Container } from '@material-ui/core';
 import DrawerHeader from './DrawerHeader';
+import ContactGrid from './ContactGrid';
 
 const drawerWidth = 300;
 
@@ -34,6 +35,7 @@ const useStyles = makeStyles(theme => ({
     },
   },
   appBar: {
+    backgroundColor: '#283044',
     [theme.breakpoints.up('sm')]: {
       width: `calc(100% - ${drawerWidth}px)`,
       marginLeft: drawerWidth,
@@ -128,6 +130,7 @@ function MainView(props) {
             <ListItemText primary="Projects" />
           </ListItem>
         </NavLink>
+        <ContactGrid />
       </List>
     </div>
   );
